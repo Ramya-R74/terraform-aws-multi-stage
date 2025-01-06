@@ -1,6 +1,6 @@
 resource "aws_key_pair" "deployer" {
   key_name   = "${var.env}-terra-automate-key"
-  public_key = file("/workspaces/terraform-aws-multi-stage/multi-infra/keys/multi-stage-key.pub")
+  public_key = file("/d/DevOps/AWS/terraform-aws-multistage/terraform-aws-multi-stage-1/multi-infra/keys/multi-stage-key.pub")
 }
 
 resource "aws_instance" "ec2_instance" {
