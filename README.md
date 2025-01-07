@@ -19,7 +19,7 @@ The project involves:
     
 ## Project Diagram : 
 
-![Project-diagram](images/architesture.png)
+![Project-diagram](images/architecture.png)
 
 
 # **1\. Installing Terraform and Ansible**
