@@ -19,7 +19,7 @@ The project involves:
     
 ## Project Diagram : 
 
-![Project-diagram](images/Project-design.gif)
+![Project-diagram](images/architesture.png)
 
 
 # **1\. Installing Terraform and Ansible**
@@ -65,7 +65,7 @@ Follow these steps to install Terraform on Ubuntu:
     ```
     
 
-![image1](images/image1.png)
+![image1](images/resource-creation.png)
 
 ---
 
@@ -199,8 +199,8 @@ After creating the `modules` directory, add basic configurations to each Terrafo
     Your structure should look like this:
     
     ```bash
-    infra/
-    ├── bucket.tf  
+    module/
+    ├── s3.tf  
     ├── dynamodb.tf  
     ├── ec2.tf  
     ├── output.tf  
@@ -273,7 +273,7 @@ At this point, your Terraform project structure should look like this:
 ```bash
 ├── devops-key        # Private SSH key for EC2 access
 ├── devops-key.pub    # Public SSH key for EC2 access
-├── infra
+├── module
 │   ├── bucket.tf
 │   ├── dynamodb.tf
 │   ├── ec2.tf
@@ -282,6 +282,7 @@ At this point, your Terraform project structure should look like this:
 ├── main.tf           # Defines environment-based modules
 ├── providers.tf      # AWS provider configuration
 ├── terraform.tf      # Backend configuration for state management
+
 ```
 
 ---
@@ -295,29 +296,23 @@ Run the following commands to initialize, plan, and apply your Terraform setup:
 
 a. `terraform init` : Initialize Terraform with the required providers and modules
 
-![image3](images/image3.png)
-
 b. `terraform plan` : Review the plan to apply changes
 
-![image4](images/image4.png)
-
 c. `terraform apply` : Apply the changes to provision infrastructur
-
-![image5](images/image5.png)
 
 > You can see below that all instance , buckets ,dynamodb are running or created , which is created through Terraform :
 
 1. Instances :
     
-    ![image6](images/image6.png)
+    ![image6](images/instances.png)
     
 2. Buckets :
     
-    ![image7](images/image7.png)
+    ![image7](images/bucket.png)
     
 3. DynamoDb tables:
     
-    ![image8](images/image8.png)
+    ![image8](images/table.png)
     
 
 ---
