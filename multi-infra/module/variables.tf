@@ -3,26 +3,22 @@ variable "ami" {
   type = string
 }
 
-variable "cidr" {
-  default = "10.0.0.0/16"
-}
-
-variable "instance-type" {
+variable "instance_type" {
   description = "Type of my instance"
   type = string
 
 }
-variable "key-name" {
-  description = "My instance key"
+variable "key_name" {
+  description = "EC2 instance key"
   type = string
 }
 
-variable "security-grp" {
-  description = "My instance sg"
+variable "security_grp" {
+  description = "EC2 instance sg"
   type = string
 }
 
-variable "instance-count" {
+variable "instance_count" {
   description = "Number of instance created"
   type = number
 }
@@ -32,7 +28,7 @@ variable "env" {
   type = string
 }
 
-variable "volume-size" {
+variable "volume_size" {
     description = "This is the size of Root EBS for AWS EC2"
     type = number
 }
